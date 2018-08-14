@@ -1,6 +1,6 @@
 const config = {
-  projectName: 'taro-zhihu',
-  date: '2018-8-13',
+  projectName: 'taro-weapp',
+  date: '2018-8-14',
   designWidth: 750,
   sourceRoot: 'src',
   outputRoot: 'dist',
