@@ -1,8 +1,8 @@
 {
-  "name": "myApp",
+  "name": "taro-zhihu",
   "version": "1.0.0",
   "private": true,
-  "description": "第一个Taro应用",
+  "description": "taro 知乎项目",
   "main": "index.js",
   "scripts": {
     "build:weapp": "taro build --type weapp",
@@ -14,29 +14,35 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@tarojs/components": "^0.0.51",
-    "@tarojs/router": "^0.0.51",
-    "@tarojs/taro": "^0.0.51",
-    "@tarojs/taro-h5": "^0.0.51",
-    "@tarojs/taro-weapp": "^0.0.51",
-    "nervjs": "^1.3.0"
+    "@tarojs/async-await": "^0.0.70",
+    "@tarojs/components": "^0.0.70",
+    "@tarojs/redux": "^0.0.70",
+    "@tarojs/redux-h5": "^0.0.70",
+    "@tarojs/router": "^0.0.70",
+    "@tarojs/taro": "^0.0.70",
+    "@tarojs/taro-h5": "^0.0.70",
+    "@tarojs/taro-weapp": "^0.0.70",
+    "nervjs": "^1.3.0",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@tarojs/cli": "^0.0.51",
-    "@tarojs/plugin-babel": "^0.0.51",
-    "@tarojs/plugin-csso": "^0.0.51",
-    "@tarojs/plugin-sass": "^0.0.51",
-    "@tarojs/plugin-uglifyjs": "^0.0.51",
-    "@tarojs/webpack-runner": "^0.0.51",
+    "@tarojs/cli": "^0.0.70",
+    "@tarojs/plugin-babel": "^0.0.70",
+    "@tarojs/plugin-csso": "^0.0.70",
+    "@tarojs/plugin-sass": "^0.0.70",
+    "@tarojs/plugin-uglifyjs": "^0.0.70",
+    "@tarojs/webpack-runner": "^0.0.70",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
-    "eslint-config-taro": "^0.0.51",
+    "eslint-config-taro": "^0.0.70",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-taro": "^0.0.51"
+    "eslint-plugin-taro": "^0.0.70"
   }
 }

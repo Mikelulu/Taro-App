@@ -1,46 +1,25 @@
 import Taro, { Component } from '@tarojs/taro'
+import '@tarojs/async-await'
+import { Provider } from '@tarojs/redux'
+
 import Index from './pages/index'
 
+import configStore from './store'
+
 import './app.scss'
+
+const store = configStore()
 
 class App extends Component {
   config = {
     pages: [
-      'pages/home/home',
-      'pages/find/find',
-      'pages/mine/mine'
+      'pages/index/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    },
-    tabBar: {
-      backgroundColor: '#fff',
-      color: '#8a8a8a',
-      selectedColor: 'black',
-      list: [
-        {
-          pagePath: 'pages/home/home',
-          text: '首页',
-          iconPath: './asset/home_normal.png',
-          selectedIconPath: './asset/home_selected.png'
-        },
-        {
-          pagePath: 'pages/find/find',
-          text: '发现',
-          iconPath: './asset/yan_normal.png',
-          selectedIconPath: './asset/yan_selected.png'
-        },
-        {
-          pagePath: 'pages/mine/mine',
-          text: '我的',
-          iconPath: './asset/mine_noraml.png',
-          selectedIconPath: './asset/mine_selected.png'
-        }
-      ]
-
     }
   }
 
@@ -54,7 +33,9 @@ class App extends Component {
 
   render () {
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }
