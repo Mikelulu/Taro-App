@@ -14,9 +14,9 @@ class App extends Component {
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
+      navigationBarBackgroundColor: '#0068C4',
       navigationBarTitleText: '知乎',
-      navigationBarTextStyle: 'black',
+      navigationBarTextStyle: 'white',
       enablePullDownRefresh: true
     },
     tabBar: {
