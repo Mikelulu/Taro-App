@@ -2,7 +2,7 @@
  * @Author: michael 
  * @Date: 2018-08-15 17:59:35 
  * @Last Modified by: michael
- * @Last Modified time: 2018-08-16 00:11:48
+ * @Last Modified time: 2018-08-23 16:59:10
  */
 
 import Taro, { Component } from '@tarojs/taro'
@@ -11,6 +11,7 @@ import './index.scss'
 
 import searchPng from '../../asset/images/search.png'
 import lightingPng from '../../asset/images/lighting.png'
+import HomeCell from '../../components/homeCell/homeCell';
 
 export default class Index extends Component {
   
@@ -49,7 +50,7 @@ export default class Index extends Component {
       console.log(res)
       if (res.data.success) {
         // setState 为异步
-        //  concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+        // concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
         this.setState({
           loading: false,
           dataList: isLoadMore ? this.state.dataList.concat(res.data.data) : res.data.data
@@ -89,8 +90,29 @@ export default class Index extends Component {
   render () {
     
     return (
-      <View className='container'>
+      <View>
         
+        <ScrollView className='list' 
+          scrollY
+          scrollWithAnimation
+          enableBackToTop
+          scrollTop='0'
+          onScrollToUpper={this.updateList}
+          onScrollToLower={this.appendNextPageList}
+        >
+          {
+            this.state.dataList.map((item) => {
+              return(
+                <HomeCell
+                  key={item}
+                  model={item}
+                >
+                </HomeCell>
+              )
+            })
+          }
+        </ScrollView>
+
         <View className='topView'>
           <View className='search'>
             <Image src={searchPng}></Image>
@@ -101,16 +123,6 @@ export default class Index extends Component {
           </View>
         </View>
         
-        <ScrollView className='list' 
-          scrollY
-          scrollWithAnimation
-          enableBackToTop
-          scrollTop='0'
-          onScrollToUpper={this.updateList}
-          onScrollToLower={this.appendNextPageList}
-        >
-
-        </ScrollView>
       </View>
     )
   }
