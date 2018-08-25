@@ -18,7 +18,7 @@ export default class HomeCell extends Component {
     let model = this.props.model;
     return(
 
-      <View className='home-cell' onClick={this.navigateTo.bind(this, '/pages/answer/answer')}>
+      <View className='home-cell' onClick={this.navigateTo.bind(this, '/pages/answer/answer?id=2&type=test')}>
 
         {/* 顶部 */}
         <View className='cell-top'>
@@ -26,7 +26,7 @@ export default class HomeCell extends Component {
             <Image className='avatar' src={model.feed_source_img}></Image>
             <View>{model.feed_source_name}</View>
           </View>
-          <Image className='more' src={more} onClick={this.navigateTo.bind(this, '/pages/question/question')}></Image>
+          <Image className='more' src={more} onClick={this.navigateTo.bind(this, '/pages/question/question',)}></Image>
         </View>
 
         {/* 中间内容 */}

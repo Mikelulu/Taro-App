@@ -2,7 +2,7 @@
  * @Author: michael 
  * @Date: 2018-08-15 17:59:35 
  * @Last Modified by: michael
- * @Last Modified time: 2018-08-23 16:59:10
+ * @Last Modified time: 2018-08-24 16:58:56
  */
 
 import Taro, { Component } from '@tarojs/taro'
