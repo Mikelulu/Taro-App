@@ -1,7 +1,7 @@
 
 import Taro, { Component } from '@tarojs/taro';
 import {
-  View, Image
+  View, Image, Text
 } from '@tarojs/components';
 
 import './answer.scss'
@@ -12,6 +12,7 @@ import img3 from '../../asset/images/flag.png'
 import img4 from '../../asset/images/heart2.png'
 import img5 from '../../asset/images/star2.png'
 import img6 from '../../asset/images/comment.png'
+import img7 from '../../asset/images/icon1.jpeg'
 
 export default class Answer extends Component {
 
@@ -79,6 +80,38 @@ export default class Answer extends Component {
     Taro.showToast({ title: title, icon: 'none'})
   }
 
+  /**
+   * 点击关注
+   */
+  follow = () => {
+    Taro.showToast({ title: "关注成功" })
+  }
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh () {
+    console.log('下拉刷新')
+
+    Taro.stopPullDownRefresh()
+    
+  }
+
+  // /**
+  //  * 页面上拉触底事件的处理函数
+  //  */
+  // onReachBottom () {
+  //   console.log('上拉加载')
+  // }
+
+  // /**
+  //  * 用户点击右上角分享
+  //  */
+  // onShareAppMessage () {
+  //   console.log('分享')
+  // }
+  onPageScroll() {
+    console.log('滑动了')
+  }
   render() {
     console.log(this.state.pixelRatio)
     console.log(this.state.screenWidth)
@@ -91,7 +124,22 @@ export default class Answer extends Component {
       <View className='container'>
 
         <View className='question'>
-          选择 Kindle 而不是纸质书的原因是什么？
+          <View>选择 Kindle 而不是纸质书的原因是什么？</View>
+        </View>
+        <View className='author'>
+          <Image src={img7}></Image>
+          <View className='info'>
+            <View className='info-name'>
+              Rebecca
+            </View>
+            <View className='info-des'>
+              WEB前端*不靠谱天气预报员*想做代码小仙女
+            </View>
+          </View>
+
+          <View className='follow' onClick={this.follow}>
+            <Text>十 关注</Text>
+          </View>
         </View>
         <View className='content'>
           难道不明白纸质书更贵啊！！！
@@ -110,6 +158,7 @@ export default class Answer extends Component {
             <Image src={goodBad}></Image>
             <View>2.1k</View>
           </View>
+
           {
             this.state.titleArr.map((title) => {
               console.log(title);
@@ -124,6 +173,7 @@ export default class Answer extends Component {
             })
           }
         </View>
+          
       </View>
     )
   }

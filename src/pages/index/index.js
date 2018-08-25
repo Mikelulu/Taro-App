@@ -2,7 +2,7 @@
  * @Author: michael 
  * @Date: 2018-08-15 17:59:35 
  * @Last Modified by: michael
- * @Last Modified time: 2018-08-24 16:58:56
+ * @Last Modified time: 2018-08-25 13:51:04
  */
 
 import Taro, { Component } from '@tarojs/taro'
@@ -37,6 +37,20 @@ export default class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh () {
+    console.log('下拉刷新')
+
+    Taro.stopPullDownRefresh()
+
+    setTimeout(() => {
+      this.updateList()
+    }, 500)
+    
+  }
 
   /**
    * 加载数据
@@ -97,8 +111,8 @@ export default class Index extends Component {
           scrollWithAnimation
           enableBackToTop
           scrollTop='0'
-          onScrollToUpper={this.updateList}
-          onScrollToLower={this.appendNextPageList}
+          // onScrollToUpper={this.updateList}
+          // onScrollToLower={this.appendNextPageList}
         >
           {
             this.state.dataList.map((item) => {

@@ -13,7 +13,7 @@ class App extends Component {
       'pages/question/question'
     ],
     window: {
-      backgroundTextStyle: 'light',
+      backgroundTextStyle: 'dart',
       navigationBarBackgroundColor: '#0068C4',
       navigationBarTitleText: '知乎',
       navigationBarTextStyle: 'white',
