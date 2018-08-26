@@ -7,7 +7,12 @@ import more from '../../asset/images/more.png'
 
 export default class HomeCell extends Component {
 
-  navigateTo = (url) => {
+  navigateTo = (url, e) => {
+    console.log(e)
+    console.log('跳转')
+    // 阻止事件冒泡
+    e.stopPropagation()
+    
     Taro.navigateTo({
       url: url
     })

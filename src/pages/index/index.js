@@ -2,11 +2,12 @@
  * @Author: michael 
  * @Date: 2018-08-15 17:59:35 
  * @Last Modified by: michael
- * @Last Modified time: 2018-08-25 13:51:04
+ * @Last Modified time: 2018-08-26 09:48:22
  */
 
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, ScrollView, Input } from '@tarojs/components'
+
 import './index.scss'
 
 import searchPng from '../../asset/images/search.png'

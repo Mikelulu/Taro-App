@@ -165,7 +165,7 @@ export default class Answer extends Component {
               let index = this.state.titleArr.indexOf(title)
               console.log(index);
               return(
-                <View className='item' onClick={this.itemClicked.bind(this, index)}>
+                <View key={index} className='item' onClick={this.itemClicked.bind(this, index)}>
                   <Image src={this.state.imageArr[index]}></Image>
                   <View>{title}</View>
                 </View>
