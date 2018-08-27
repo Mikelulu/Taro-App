@@ -1,0 +1,43 @@
+
+
+.user {
+  padding: 30px 25px 30px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px #eeeeee;
+  
+  image {
+    flex: 1;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  .user-info {
+    flex: 5;
+    text-align: left;
+
+    text, div, span {
+      display: block;
+    }
+
+    .userinfo-nickname {
+      font-size: 30px;
+      padding: 8px 0 10px;
+      color: #818a8f;
+    }
+
+    .edit {
+      font-size: 30px;
+      color: #bababa;
+      line-height: 34px;
+    }
+  }
+}
+
+.my {
+  border-top: 1px solid #eeeeee;
+}

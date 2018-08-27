@@ -11,3 +11,19 @@ $theme-color: #298DE5;
   justify-content: space-between;
   box-sizing: border-box;
 }
+
+.flex-wrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item {
+  flex-grow: 1; // 属性定义弹性盒子项（flex item）的拉伸因子   索取父容器的剩余空间，默认值是0
+  text-align: center;
+}
+
+.flex-tab {
+  flex-flow: row nowrap; // flex-direction 和 flex-wrap 的简写。
+  justify-content: space-around;
+  align-items: stretch; // 弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度
+}

@@ -86,6 +86,23 @@ export default class Answer extends Component {
   follow = () => {
     Taro.showToast({ title: "关注成功" })
   }
+
+  /**
+   * 预览图片
+   */
+  previewImage = () => {
+    console.log('点击了图片')
+
+    // // 只能预览网络图片
+    // Taro.previewImage({
+    //   current: icon,
+    //   urls: [icon],
+    // }).then(res => {
+    //   console.log(res)
+    // }).catch(err => {
+    //   console.log(err)
+    // })
+  }
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -149,7 +166,7 @@ export default class Answer extends Component {
           碎片时间阅读总不能天天背着一本书吧，那么占地方。
           看到描述最后一段，感觉有骗答案的嫌疑
         </View>
-        <Image className='image' src={icon}></Image>
+        <Image className='image' src={icon} onClick={this.previewImage}></Image>
 
         {/* 底部 */}
         <View className='bottom'>

@@ -31,7 +31,7 @@ export default class HomeCell extends Component {
             <Image className='avatar' src={model.feed_source_img}></Image>
             <View>{model.feed_source_name}</View>
           </View>
-          <Image className='more' src={more} onClick={this.navigateTo.bind(this, '/pages/question/question',)}></Image>
+          <Image className='more' src={more} onClick={this.navigateTo.bind(this, '/pages/question/question')}></Image>
         </View>
 
         {/* 中间内容 */}

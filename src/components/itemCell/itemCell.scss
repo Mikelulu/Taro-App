@@ -1,0 +1,29 @@
+
+
+.item-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px 0 0 50px;
+
+  image, img {
+    // background: red;
+    // flex: 1;
+    display: block;
+    margin-bottom: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .des {
+    flex: 5;
+    margin-left: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #eeeeee;
+    text {
+      text-align: left;
+      font-size: 35px;
+      color: #6d6d6d;
+    }
+  }
+}
