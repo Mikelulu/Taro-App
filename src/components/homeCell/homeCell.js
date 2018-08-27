@@ -7,6 +7,10 @@ import more from '../../asset/images/more.png'
 
 export default class HomeCell extends Component {
 
+  static defaultProps = {
+    mode: {}
+  }
+  
   navigateTo = (url, e) => {
     console.log(e)
     console.log('跳转')

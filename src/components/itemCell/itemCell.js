@@ -5,7 +5,11 @@ import { View, Image, Text } from '@tarojs/components';
 
 export default class ItemCell extends Component {
 
-
+  static defaultProps = {
+    src: '',
+    title: ''
+  }
+  
   render() {
     
     return(
